@@ -6,7 +6,8 @@ before_script:
   - echo "This runs before the main script."
 
 script:
-  - echo "This is the main build script."
+  - echo "Running a simple test..."
+  - python -c "print('Hello, Travis!')"
 
 after_script:
   - echo "This runs after the main script."
