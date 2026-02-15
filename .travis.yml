@@ -2,5 +2,11 @@ language: python
 python:
   - "3.8"
 
+before_script:
+  - echo "This runs before the main script."
+
 script:
-  - echo "Skipping tests"
+  - echo "This is the main build script."
+
+after_script:
+  - echo "This runs after the main script."
