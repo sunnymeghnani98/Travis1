@@ -1,9 +1,15 @@
 language: python
+dist: focal
 python:
-  - "3.8"
+  - "3.11"
 
 before_script:
   - echo "This runs before the main script."
+
+install:
+  - python --version
+  - pip --version || (sudo apt-get update -y && sudo apt-get install -y python3-pip)
+  - if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
 script:
   - echo "Running a simple test..."
