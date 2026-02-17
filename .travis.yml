@@ -1,7 +1,7 @@
 language: python
 dist: focal
 python:
-  - "3.11"
+  - "3.8"
 
 before_script:
   - echo "This runs before the main script."
